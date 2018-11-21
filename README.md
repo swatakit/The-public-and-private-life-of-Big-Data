@@ -14,6 +14,10 @@ nltk
 BeautifulSoup
 matplotlib
 wordcloud
+urllib
+datetime
+time
+os
 ```
 
 ## Authors
