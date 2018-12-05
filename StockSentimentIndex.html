@@ -11797,7 +11797,7 @@ div#notebook {
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><font face="Verdana, cursive, sans-serif" ></p>
 <h2>What is natural language processing?</h2><p>Natural language processing is a sub field of computer science. The purpose of this sub-field is to make computers understand human language so that it can performance certain tasks. Example of applications of NLP are document summarisation, translation, chatbots and sentimental analysis. In order to make computer understand human language, the language must be convert to a sequence of binary (0,1). General NLP methodology involves (1) Lexical analysis: convert sentence to tokens, (2) Syntactic analysis: analyse and understand grammar structure and relationship between token, (3) Interpreting the meaning of a sentence; which require machine learning or deep learning methodologies. In this program, we specifically show simple tasks of natural language processing for sentiment analysis, step-by-step.</p><p><h2>What is sentiment analysis?</h2></p>
-<p>Sentiment analysis is a process of gauging general opinion toward a certain topic. Sentiment analysis process usually involves aggregating freetext data and determines whether this freetext data is good sentiment or bad sentiment. The purpose of this program is to gently introduce reader to NLP and sentiment analysis by demonstrating an end-to-end process from data preparation -to- model creation -to- model excercution. Therefore, the following guidelines are by no means exhaustive.  </p>
+<p>Sentiment analysis is a process of gauging general opinion toward a certain topic. Sentiment analysis process usually involves aggregating freetext data and determines whether this freetext data is good sentiment or bad sentiment. The purpose of this program is to gently introduce reader to NLP and sentiment analysis by demonstrating an end-to-end process from data preparation -to- model creation -to- model excecution. Therefore, the following guidelines are by no means exhaustive.  </p>
 <ol>
    <li>Identify credible source and extract the data from the source</li>
    <li>Data preparation: cleaning, remove stopwords, remove non-alphabetic characters, normalize charecter case to either lower or upper.</li>
@@ -11875,7 +11875,7 @@ div#notebook {
 <p><p><b>stopwords</b> are words which have no sentiment meaning such "as is, am, are,a ,an ,the". These words must be removed in order to minimise the size of feature matrix.</p></p>
 <p><p></p>
 <ul>
-    <li><code>text_preprocess_tokenizer()</code> this function pre-process a sentence and tokenize it </li>
+    <li><code>text_preprocess_tokenizer()</code> this function pre-process a sentence, clean it and tokenize it </li>
     <li><code>tokens_to_vector()</code> this function convert all tokens to vectors</li>
     <li><code>visualize()</code> wordcloud visulization tool</li>
 </ul>
@@ -11951,7 +11951,7 @@ div#notebook {
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><font face="Verdana, cursive, sans-serif">
 <b>Step 3 Data pre-posessing, tokensizing and dictionary creation</b></p>
-<p><p>In this step, we iterate through each news item: pre-process it, tokenize it, as well as building up a dictionary; all at the same time. <br>Note that <code>word_index_map</code> is the <b>dictionary</b>, which will be used to create feature matrix in the step.</p>
+<p><p>In this step, we iterate through each news item: pre-process it, tokenize it, as well as building up a dictionary; all at the same time. <br>Note that <code>word_index_map</code> is the <b>dictionary</b>, which will be used to create feature matrix in the next step.</p>
 
 </div>
 </div>
@@ -12043,7 +12043,7 @@ div#notebook {
 <p><font face="Verdana, cursive, sans-serif">
 <b>Step 4 Create feature matrix</b></p>
 <p><p>Convert tokenized vectors to feature matrix. Note that this feature matrix is also called "bag-of-words" or "term-document" matrix.</p>
-<p><P>We will show how to create different types of bag-of-words with python libraries in the later section</p>
+<p><p><font color='blue'>We will show how to create different types of bag-of-words with python libraries in the later section</font></p>
 
 </div>
 </div>
@@ -12992,11 +12992,11 @@ avg / total       0.87      0.83      0.84       144
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><font face="Verdana, cursive, sans-serif" ></p>
-<h1><center>Conclusion</center></h1><p>The purpose of this program is to demonstrate a basic steps of NLP. Below table summarise the performance of each model by each type of feature matrix. It is shown that TF-IDF with Random Forest etimating technique outperform all other models by approximately 10% - However, this demonstration is not with out major critigues on both data and methods.</p>
+<h1><center>Conclusion</center></h1><p>The purpose of this program is to demonstrate basic steps of NLP. Below table summarise the performance of each model by each type of feature matrix. It is shown that TF-IDF with Random Forest etimating technique outperform all other models by approximately 10% - However, this demonstration is not with out major critigues on both data and methodology.</p>
 <p><img src="./images/comparematric.png" ></p>
 <p><b>Data Critiques</b></p>
-<p>The most important part of this project is the reliability and credibility of the source of the data. We select Reuters news due to its reptutation of unbiasness. We label each news as good, bas, neutral based on its title and body content, which maybe subjective to the eyes of the readers. In total, we have only 1,914 news coverage of top SET 50 SET during 2014-2018/H1, more news from other local sources would have enhanced the robustnexs of the model </p><p><b>Modeling Critiques</b></p>
-<p>As demonstrated in all 3 models, the probability of news being 1 (good news) or 0 (bad news) are based on the features and labels, the more occurance of positive(negative) words, the higher proability of it being a good(bad) news. All three model does not take into account the importance of the relationship between each word. To address this problem, we would need to apply deep learning technique.</p>
+<p>The most important part of this project is the reliability and credibility of the source of the data. We select Reuters news due to its reptutation of unbiasness. We label each news as good, bas, neutral based on its title and body content, which maybe subjective to the eyes of the readers. In total, we have only 1,914 news coverage of THAI stocks in SET50 index during 2014-2018/H1, more news from other local sources would have enhanced the robustnexs of the model </p><p><b>Modeling Critiques</b></p>
+<p>As demonstrated in all 3 models, the probability of news being 1 (good news) or 0 (bad news) are based on the features and labels, the more occurance of positive(negative) words, the higher proability of it being a good(bad) news. All three models do not take into account the importance of the relationship between each word. To futher this study, one would perform deep learning technique.</p>
 </div>
 </div>
 </div>
