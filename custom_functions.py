@@ -48,7 +48,7 @@ def print_classification_performance2class_report(model,X_test,y_test):
     
     #ROC
     plt.subplot(142)
-    pfr, tpr, _ = roc_curve(y_test,y_pred)
+    pfr, tpr, _ = roc_curve(y_test,y_pred_proba)
     roc_auc = auc(pfr, tpr)
     gini = (roc_auc*2)-1
     plt.plot(pfr, tpr, label='ROC Curve (area =  {:.2%})'.format(roc_auc) )
